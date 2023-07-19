@@ -1,16 +1,13 @@
-# This is a sample Python script.
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# X will be a 2 dim array with values (-2, 0) across 100 rows and 2 columns
+X = -2 * np.random.rand(100, 2)
 
+# X1 will be a 2 dim array with values (1, 3) across 50 rows and 2 columns
+X1 = 1 + 2 * np.random.rand(50, 2)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# X from rows 49 to 99 replaced by the values from X1 which have values in the space (1, 3)
+X[50:100, :] = X1
