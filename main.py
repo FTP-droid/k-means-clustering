@@ -34,3 +34,15 @@ plt.show()
 
 # Show which X points belong to cluster 1 and cluster 2
 print(Kmean.labels_)
+
+# ! For a new test value, determine which cluster it will belong to
+
+# Define an array with values [-1, -1]
+sampleValue = np.array([-1, -1])
+
+# Reshape the array to make it 2-dimensional to simulate the shape of X. Array will now be [[-1, -1]].
+test = sampleValue.reshape(1, -1)
+
+# Predict the cluster where the test values (really only one value in test) belong
+print("The test values belongs to clusters", Kmean.predict(test))
+
