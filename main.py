@@ -16,3 +16,8 @@ X[50:100, :] = X1
 # the second column of rows in X. Marker size set to 50 & color of points set to blue.
 plt.scatter(X[:, 0], X[:, 1], s=50, c='b')
 plt.show()
+
+# Set up a KMeans clustering algorithm with number of clusters = 2, init = 10 resulting in 10 different
+# KMeans clustering algorithm runs. Finally fit the data in X using the defined Kmeans algorithm.
+Kmean = KMeans(n_clusters=2)
+Kmean.fit(X)
