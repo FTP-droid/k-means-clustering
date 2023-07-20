@@ -17,11 +17,14 @@ X[50:100, :] = X1
 Kmean = KMeans(n_clusters=2)
 Kmean.fit(X)
 
+XClusterCenters = Kmean.cluster_centers_
+
 # Prints the center of the clusters of X
-print(Kmean.cluster_centers_, flush=True)
+print(XClusterCenters, flush=True)
 
 
 # plot the X values with x values consisting of the first column of rows in X and y values consisting of
 # the second column of rows in X. Marker size set to 50 & color of points set to blue.
 plt.scatter(X[:, 0], X[:, 1], s=50, c='b')
+
 plt.show()
