@@ -18,7 +18,7 @@ Kmean = KMeans(n_clusters=2)
 Kmean.fit(X)
 
 # Prints the center of the clusters of X
-print(Kmean.cluster_centers_)
+print(Kmean.cluster_centers_, flush=True)
 
 
 # plot the X values with x values consisting of the first column of rows in X and y values consisting of
